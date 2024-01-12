@@ -1,0 +1,103 @@
+Please find details below:
+
+Document URL : https://fcnode5.faircent.com/faircent/
+
+API Details :
+    URL : https://fcnode5.faircent.com/
+    x-application-id : 9f505d468d0e301556564d4a86f5dd79
+    x-application-name : SHARPEDGE
+
+
+CURL :
+
+// DuplicateCheck API
+=========================================================
+
+curl --location --request POST 'https://fcnode5.faircent.com/v1/api/duplicateCheck' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "pan": "ABCDE6775F",
+    "mobile": "9999999999",
+    "email": "test12344@yopmail.com"
+}'
+
+
+// Get Dropdown List API
+=========================================================
+
+curl --location --request GET 'https://fcnode5.faircent.com/v1/api/registration/dropdown' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "loan": 12345
+}'
+
+
+// User Registration API
+=========================================================
+
+curl --location --request POST 'https://fcnode5.faircent.com/v1/api/aggregrator/register/user' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+  "fname": "Test",
+  "lname": "User",
+  "dob": "1991-01-01",
+  "address": "Sec-60 Gurugram Haryana 122001",
+  "city": "Gurugram",
+  "state": "Haryana",
+  "pin": 122001,
+  "mobile": "9999999999",
+  "pan": "ABCDE6775F",
+  "mail": "test12344@yopmail.com",
+  "gender": "M",
+  "employment_status": "Self Employed",
+  "loan_purpose": 1364,
+  "monthly_income": 7859084,
+  "loan_amount": "9000"
+}'
+
+## Registration status : Approved/REJECTED
+## loan_purpose : Enter loan_purpose id (get from "Dropdown List API")
+
+
+// Upload Pdf Document
+=========================================================
+
+curl --location --request POST 'https://fcnode5.faircent.com/v1/api/upload_aggrement' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'x-access-token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--form 'type="AGREEMENT"' \
+--form 'sign_ip="127.1.1.0"' \
+--form 'sign_time="2019-07-01T06:45:26.741Z"' \
+--form 'loan_id="1009811234"' \
+--form 'docImage=@"/home/saurabhkumar/Pictures/43234.pdf"'
+
+
+// Upload Images/Documents
+=========================================================
+
+curl --location --request POST 'https://fcnode5.faircent.com/v1/api/uploadprocess' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'x-access-token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--form 'type="PANCARD"' \
+--form 'loan_id="1009811234"' \
+--form 'docImage=@"/home/saurabhkumar/Pictures/43234.pdf"'
+
+
+// Get Loan Status
+=========================================================
+
+curl --location --request POST 'https://fcnode5.faircent.com/v1/api/current/loanstatus' \
+--header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
+--header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "loan_id": 1009811234
+}'
