@@ -1,103 +1,91 @@
-Please find details below:
-
-Document URL : https://fcnode5.faircent.com/faircent/
-
-API Details :
-    URL : https://fcnode5.faircent.com/
-    x-application-id : 9f505d468d0e301556564d4a86f5dd79
-    x-application-name : SHARPEDGE
-
-
-CURL :
-
-// DuplicateCheck API
-=========================================================
-
-curl --location --request POST 'https://fcnode5.faircent.com/v1/api/duplicateCheck' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "pan": "ABCDE6775F",
-    "mobile": "9999999999",
-    "email": "test12344@yopmail.com"
-}'
+First name: SALMAN
+adhar no. : 824404637140
+pan no. : LSPPS9693K 
+dob : 01/01/2002
+mobile no. : 6396807369
+pincode : 243638
+address : SAHASWAN
+Bank account no. 6154000100094383
+bank name : Punjab National Bank
+ifsc code : PUNB0615400
 
 
-// Get Dropdown List API
-=========================================================
-
-curl --location --request GET 'https://fcnode5.faircent.com/v1/api/registration/dropdown' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "loan": 12345
-}'
+Ameena vegam  
+adhar number 790550619965 
+Pan number bvppv2069d 
+dob 01/01/1967 
+pin code 243638 adress sahaswan Bank account no.35108100004855 Bank name bank of baroda IFSC code BARB0SAHASW
 
 
-// User Registration API
-=========================================================
-
-curl --location --request POST 'https://fcnode5.faircent.com/v1/api/aggregrator/register/user' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "fname": "Test",
-  "lname": "User",
-  "dob": "1991-01-01",
-  "address": "Sec-60 Gurugram Haryana 122001",
-  "city": "Gurugram",
-  "state": "Haryana",
-  "pin": 122001,
-  "mobile": "9999999999",
-  "pan": "ABCDE6775F",
-  "mail": "test12344@yopmail.com",
-  "gender": "M",
-  "employment_status": "Self Employed",
-  "loan_purpose": 1364,
-  "monthly_income": 7859084,
-  "loan_amount": "9000"
-}'
-
-## Registration status : Approved/REJECTED
-## loan_purpose : Enter loan_purpose id (get from "Dropdown List API")
+ameena : 
+Array
+(
+    [fname] => Ameena
+    [lname] => vegam
+    [aadhaar_number] => 790550619965
+    [pan] => bvppv2069d
+    [dob] => 01-01-1967
+    [mobile] => 6396807369
+    [email] => sajid.phpmaster@gmail.com
+    [monthly_income] => 30000
+    [employment_type] => SALARIED
+    [pincode] => 243638
+    [residence_type] => Owned
+    [job_vintage] => 08-05-2022
+    [ckyc_id] => tetststtstts
+    [ext_user_id] => 1705471913
+    [consent] => Y
+    [tnc_link] => https://www.faircent.in/terms-conditions
+    [sign_ip] => ::1
+    [sign_time] => 1705471913
+)
 
 
-// Upload Pdf Document
-=========================================================
+register response : 
+Array
+(
+    [message] => Data saved successfully
+    [error_key] => 
+    [success] => 1
+    [result] => Array
+        (
+            [loan_id] => 1004198469
+            [auth_id] => tC29oGx4/BH01m93p9/WQM8kmZtv
+            [after_expired] => 86400s
+            [token] => eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY5LCJhdXRoX2lkIjoidEMyOW9HeDQvQkgwMW05M3A5L1dRTThrbVp0diIsInVpZCI6MTAwMDAwMDY2MywiaWF0IjoxNzA1NDcxOTcyLCJleHAiOjE3MDU1NTgzNzJ9.FtLIwUA3mdIAyrya3iZa6AXjvL0RhcUuiYXPVOP4O7A
+            [status] => 1
+            [lead_status] => Approved
+            [Offer] => Array
+                (
+                    [offer_amount] => 125000
+                    [offer_roi] => 29
+                    [offer_pf] => 10000
+                    [offer_pf_precent] => 8.0
+                    [offer_tenure] => Array
+                        (
+                            [tenure_min] => 3
+                            [tenure_max] => 18
+                        )
 
-curl --location --request POST 'https://fcnode5.faircent.com/v1/api/upload_aggrement' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'x-access-token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---form 'type="AGREEMENT"' \
---form 'sign_ip="127.1.1.0"' \
---form 'sign_time="2019-07-01T06:45:26.741Z"' \
---form 'loan_id="1009811234"' \
---form 'docImage=@"/home/saurabhkumar/Pictures/43234.pdf"'
+                )
 
+        )
 
-// Upload Images/Documents
-=========================================================
+    [count] => 0
+    [responseId] => jh89PMLK97mR+7gfTriDKIxJ
+)
 
-curl --location --request POST 'https://fcnode5.faircent.com/v1/api/uploadprocess' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'x-access-token: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---form 'type="PANCARD"' \
---form 'loan_id="1009811234"' \
---form 'docImage=@"/home/saurabhkumar/Pictures/43234.pdf"'
-
-
-// Get Loan Status
-=========================================================
-
-curl --location --request POST 'https://fcnode5.faircent.com/v1/api/current/loanstatus' \
---header 'x-application-id: XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' \
---header 'x-application-name: XXXXXXXXXXXXXXXXXX' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "loan_id": 1009811234
-}'
+// login response : 
+{
+    "message": "Authorized Successfully",
+    "error_key": "",
+    "success": true,
+    "result": {
+        "loan_id": 1004198469,
+        "auth_id": "tC29oGx4\/BH01m93p9\/WQM8kmZtv",
+        "after_expired": "86400s",
+        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY5LCJhdXRoX2lkIjoidEMyOW9HeDQvQkgwMW05M3A5L1dRTThrbVp0diIsInVpZCI6MTAwMDAwMDY2MywiaWF0IjoxNzA1NjM3NDM4LCJleHAiOjE3MDU3MjM4Mzh9.5F8wpyrPBZRikYoEHQ27fBBanEVy5ZP4lB5RS6iScV8"
+    },
+    "count": 0,
+    "responseId": "xp7\/xRRAoRg35ra\/mAcd7EZO"
+}
