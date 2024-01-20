@@ -10,7 +10,7 @@ require_once "helper/api.php";
 // $login_token = $login['result']['token'];
 
 // 3. Add Bank Account
-// $bank = addBankAccount(array("loan_id"=>"1004198469", "bankname"=>"Punjab National Bank", "accountNumber"=>"6154000100094383", "token"=>""));
+// $bank = addBankAccount(array("loan_id"=>"1004198469", "bankname"=>"Punjab National Bank", "accountNumber"=>"6154000100094383", "token"=>"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY5LCJhdXRoX2lkIjoidEMyOW9HeDQvQkgwMW05M3A5L1dRTThrbVp0diIsInVpZCI6MTAwMDAwMDY2MywiaWF0IjoxNzA1NjM3NDM4LCJleHAiOjE3MDU3MjM4Mzh9.5F8wpyrPBZRikYoEHQ27fBBanEVy5ZP4lB5RS6iScV8"));
 
 // 4. Loan Flow or Pending Items
 //$pending = getPendingItems( array("loan_id"=>"1004198469", "token"=>$login_token));

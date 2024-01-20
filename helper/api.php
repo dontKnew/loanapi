@@ -23,9 +23,12 @@ function register($data){
         if (curl_errno($ch)) {
             throw new Exception('cURL Error: ' . curl_error($ch));
         }
+        
         curl_close($ch);
+        var_dump($response);
         $response = json_decode($response, true);
         logs("Response API URL :  : ".$apiUrl, $response);
+        
         return $response;
     } catch (Exception $e) {
         dd($e->getMessage());
