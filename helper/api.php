@@ -46,7 +46,6 @@ function login($data){
             'X-application-name: ' . API_NAME,
             'X-application-auth_id: ' . $auth_id,
             'Ip_address: ' . getClientIp(),
-            // 'Authorization: Bearer ' . $token,
         ];
     
         $ch = curl_init($apiUrl);
@@ -81,9 +80,9 @@ function addBankAccount($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token
         ];
-    
+
         $ch = curl_init($apiUrl);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
@@ -116,7 +115,7 @@ function disbursementStatus($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token,
         ];
     
         $ch = curl_init($apiUrl);
@@ -151,7 +150,7 @@ function kfsData($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token,
         ];
     
         $ch = curl_init($apiUrl);
@@ -186,7 +185,7 @@ function loanDetails($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token,
         ];
     
         $ch = curl_init($apiUrl);
@@ -227,7 +226,7 @@ function loanStatus($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token,
         ];
     
         $ch = curl_init($apiUrl);
@@ -252,7 +251,7 @@ function loanStatus($data){
 
 function getPendingItems($data){
     extract($data);
-    // loan_id, accont no., bank name, ifsc code, login_response_token
+    // loan_id, token
     $apiUrl = API_URL . '/borrower/alliance/get/pending/items?loan_id='.$loan_id;
     $token = $data['token']; unset($data['token']);
     try {
@@ -262,7 +261,7 @@ function getPendingItems($data){
             'X-application-id: ' . API_ID,
             'X-application-name: ' . API_NAME,
             'Ip_address: ' . getClientIp(),
-            'Authorization: Bearer ' . $token,
+            'x-access-token:' . $token,
         ];
     
         $ch = curl_init($apiUrl);

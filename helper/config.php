@@ -1,8 +1,6 @@
 <?php
 date_default_timezone_set('Asia/Kolkata'); 
 
-require_once __DIR__ . "/../vendor/autoload.php";
-
 const API_ID = "64398a0f002bb4b0692bde35517059be";
 const API_NAME = "SHARPEDGE_STPQ";
 // const API_URL = "https://fcnode5.faircent.com/v1/api/";
@@ -10,13 +8,17 @@ const API_URL = "https://stageapi2.faircent.com";
 
 function getClientIp() {
     $ipAddress = $_SERVER['REMOTE_ADDR'];
+    
     if (array_key_exists('HTTP_X_FORWARDED_FOR', $_SERVER)) {
-        $ipAddress = array_pop(explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']));
+        $ipArray = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+        $ipAddress = array_pop($ipArray);
     } elseif (array_key_exists('HTTP_CLIENT_IP', $_SERVER)) {
         $ipAddress = $_SERVER['HTTP_CLIENT_IP'];
     }
+    
     return $ipAddress;
 }
+
 
 function dd($r){
     echo  "<pre>";

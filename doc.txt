@@ -76,16 +76,19 @@ Array
 )
 
 // login response : 
-{
-    "message": "Authorized Successfully",
-    "error_key": "",
-    "success": true,
-    "result": {
-        "loan_id": 1004198469,
-        "auth_id": "tC29oGx4\/BH01m93p9\/WQM8kmZtv",
-        "after_expired": "86400s",
-        "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY5LCJhdXRoX2lkIjoidEMyOW9HeDQvQkgwMW05M3A5L1dRTThrbVp0diIsInVpZCI6MTAwMDAwMDY2MywiaWF0IjoxNzA1NjM3NDM4LCJleHAiOjE3MDU3MjM4Mzh9.5F8wpyrPBZRikYoEHQ27fBBanEVy5ZP4lB5RS6iScV8"
-    },
-    "count": 0,
-    "responseId": "xp7\/xRRAoRg35ra\/mAcd7EZO"
-}
+Array
+(
+    [message] => Authorized Successfully
+    [error_key] => 
+    [success] => 1
+    [result] => Array
+        (
+            [loan_id] => 1004198469
+            [auth_id] => tC29oGx4/BH01m93p9/WQM8kmZtv
+            [after_expired] => 86400s
+            [token] => eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY5LCJhdXRoX2lkIjoidEMyOW9HeDQvQkgwMW05M3A5L1dRTThrbVp0diIsInVpZCI6MTAwMDAwMDY2MywiaWF0IjoxNzA1OTMzOTQ2LCJleHAiOjE3MDYwMjAzNDZ9.thavYyyemFGfyIfQGfFIz9o4DGQnQ-6hoDVlvcXOx9I
+        )
+
+    [count] => 0
+    [responseId] => 7U4fpxLaTjHc2KvaA7zPRAz9
+)}
