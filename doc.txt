@@ -1,3 +1,13 @@
+First Name
+
+
+
+
+
+
+/* old data */
+
+Not --
 First name: SALMAN
 adhar no. : 824404637140
 pan no. : LSPPS9693K 
@@ -8,7 +18,7 @@ address : SAHASWAN
 Bank account no. 6154000100094383
 bank name : Punjab National Bank
 ifsc code : PUNB0615400
-
+Not --
 
 Ameena vegam  
 adhar number 790550619965 

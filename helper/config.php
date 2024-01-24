@@ -16,7 +16,8 @@ function getClientIp() {
         $ipAddress = $_SERVER['HTTP_CLIENT_IP'];
     }
     
-    return $ipAddress;
+    // return $ipAddress;
+    return "192.168.221.83";
 }
 
 
@@ -49,7 +50,6 @@ function isMissingKey($data, $sampleData){
     }
     return empty($newArr) ? false : $newArr;
 }
-
 
 function response($arr){
     return $arr;
