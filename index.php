@@ -54,6 +54,7 @@ $login_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJsb2FuX2lkIjoxMDA0MTk4NDY
 // where to get agreement id ??
 // $status = initateDisbursement(array("loan_id"=>"1004198469", "roi"=>"12","amount"=>"125000", "ifsc"=>"PUNB0615400", "agreementId"=>"" , "token"=>$login_token));
 
+
 //ABove is process of loan api..
 // - kfs data ( not checked) 
 // $kfs = kfsData(array("loan_id"=>"1004198469", "disbursement_date"=>"24/01/2024" , "first_emi_date"=>"24/01/2024", "token"=>$login_token));
